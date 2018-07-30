@@ -19,7 +19,6 @@ class AttractionsController < ApplicationController
   end
 
   def edit
-    binding.pry
     @attraction = Attraction.find(params[:id])
   end
 
