@@ -11,7 +11,6 @@ class AttractionsController < ApplicationController
   def ride
     attraction = Attraction.find(params[:id])
     ride = Ride.new(user_id: current_user.id, attraction_id: params[:attraction_id])
-    binding.pry
     if !ride.take_ride.is_a? String
       current_user.rides << ride
       attraction.rides << ride
