@@ -9,14 +9,17 @@ class AttractionsController < ApplicationController
   end
 
   def ride
+    attraction = Attraction.find(params[:id])
     ride = Ride.new(user_id: current_user.id, attraction_id: params[:attraction_id])
     binding.pry
     if !ride.take_ride.is_a? String
       current_user.rides << ride
-      ride.attraction.rides << ride
+      attraction.rides << ride
       ride.save
       redirect_to user_path(current_user)
     else
+      flash[:alert] = ride.take_ride
+      redirect_to
     end
   end
 
