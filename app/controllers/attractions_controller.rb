@@ -12,6 +12,10 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.new
   end
 
+  def create 
+    binding.pry
+  end 
+
   def ride
     attraction = Attraction.find(params[:attraction_id])
     ride = Ride.new(user_id: current_user.id, attraction_id: params[:attraction_id])
