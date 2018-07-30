@@ -36,6 +36,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def logout 
+  end
+
   private
 
   def user_params
