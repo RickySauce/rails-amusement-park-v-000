@@ -9,6 +9,7 @@ class AttractionsController < ApplicationController
   end
 
   def ride
+    redirect_to
   end
 
 end
