@@ -12,9 +12,9 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.new
   end
 
-  def create 
+  def create
     binding.pry
-  end 
+  end
 
   def ride
     attraction = Attraction.find(params[:attraction_id])
