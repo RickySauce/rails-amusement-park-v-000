@@ -19,7 +19,7 @@ class AttractionsController < ApplicationController
       redirect_to user_path(current_user)
     else
       flash[:alert] = ride.take_ride
-      redirect_to
+      redirect_to attraction_path(attraction)
     end
   end
 
