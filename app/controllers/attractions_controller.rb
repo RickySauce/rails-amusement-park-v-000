@@ -12,7 +12,9 @@ class AttractionsController < ApplicationController
     ride = Ride.new(user_id: current_user.id, attraction_id: params[:attraction_id])
     binding.pry
     if !ride.take_ride.is_a? String
-      ride.save 
+      current_user.rides << ride
+      ride.attraction.rides << ride
+      ride.save
       redirect_to user_path(current_user)
     else
     end
