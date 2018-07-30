@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 <%= form_tag('/signin')%>
 User Name: <%=select_tag "user_name", options_from_collection_for_select(User.all, "name", "name")%>
 Password: <%=password_field_tag 'password' %>
+=======
+<%= form_tag('/signup')%>
+Name: <%=text_field_tag :name%>
+Password: <%=password_field_tag :password %>
+>>>>>>> c940a59634119d74b5adac5a20e78cc588823b58
 <%= submit_tag 'Sign In' %>
