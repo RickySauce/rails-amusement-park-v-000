@@ -6,10 +6,13 @@ class Ride < ActiveRecord::Base
     attraction = self.attraction
     user = self.user
     if self.tickets && self.height
+      false
       "Sorry. You do not have enough tickets to ride the #{attraction.name}. You are not tall enough to ride the #{attraction.name}."
     elsif self.tickets
+      false
       "Sorry. You do not have enough tickets to ride the #{attraction.name}."
     elsif self.height
+      false
        "Sorry. You are not tall enough to ride the #{attraction.name}."
      else
        user.tickets -= attraction.tickets
