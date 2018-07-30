@@ -15,6 +15,7 @@ class AttractionsController < ApplicationController
       current_user.rides << ride
       attraction.rides << ride
       ride.save
+      flash[:alert] = "Thanks for riding the #{attraction.name}"
       redirect_to user_path(current_user)
     else
       flash[:alert] = ride.take_ride
