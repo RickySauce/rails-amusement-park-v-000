@@ -5,7 +5,6 @@ class AttractionsController < ApplicationController
   end
 
   def show
-    binding.pry
     @attraction = Attraction.find(params[:id])
   end
 
