@@ -10,6 +10,7 @@ class AttractionsController < ApplicationController
 
   def ride
     Ride.new(user_id: current_user.id, attraction_id: params[:attraction_id])
+    if
 
     redirect_to user_path(current_user)
   end
