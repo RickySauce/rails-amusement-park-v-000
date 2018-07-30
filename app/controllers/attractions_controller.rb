@@ -14,6 +14,7 @@ class AttractionsController < ApplicationController
     if !ride.take_ride.is_a? String
       current_user.rides << ride
       attraction.rides << ride
+      binding.pry
       ride.save
       redirect_to user_path(current_user)
     else
