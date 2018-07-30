@@ -1,3 +1,4 @@
 <%=@attraction.name %>
 <%= form_tag('/ride')%>
+<%=hidden_field_tag 'attraction_id', @attraction.id %>
 <%= submit_tag 'Go on this ride' %>
