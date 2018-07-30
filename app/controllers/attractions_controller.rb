@@ -4,4 +4,7 @@ class AttractionsController < ApplicationController
     @attractions = Attraction.all
   end
 
+  def show
+  end
+
 end
