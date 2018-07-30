@@ -9,7 +9,7 @@ class AttractionsController < ApplicationController
   end
 
   def ride
-    redirect_to
+    redirect_to user_path(current_user)
   end
 
 end
