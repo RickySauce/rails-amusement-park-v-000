@@ -9,7 +9,6 @@ class AttractionsController < ApplicationController
   end
 
   def ride
-    binding.pry
     Ride.new(user_id: current_user.id, attraction_id: params[:attraction_id])
 
     redirect_to user_path(current_user)
