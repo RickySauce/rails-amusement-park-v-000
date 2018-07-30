@@ -10,10 +10,11 @@ class AttractionsController < ApplicationController
 
   def ride
     ride = Ride.new(user_id: current_user.id, attraction_id: params[:attraction_id])
-    if !ride.take_ride.is_a? String 
+    binding.pry
+    if !ride.take_ride.is_a? String
       binding.pry
       redirect_to user_path(current_user)
-    else 
+    else
     end
   end
 
