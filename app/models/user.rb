@@ -1,10 +1,9 @@
+
 class User < ActiveRecord::Base
   has_many :rides
   has_many :attractions, through: :rides
   has_secure_password
   before_create :default
-
-  after_initialize :default
 
   def default
     self.admin = false
@@ -19,12 +18,7 @@ class User < ActiveRecord::Base
       else
         "happy"
       end
-    if self.nausea > self.happiness
-      "sad"
-    else
-      "happy"
     end
   end
 
-end
 end
